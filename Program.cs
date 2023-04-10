@@ -2,7 +2,7 @@
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        Menu();
     }
     static int Menu()
     {
@@ -23,12 +23,15 @@
             case 1:
 
                 boxeador1 = ObtenerBoxeador();
+                Menu();
                 break;
             case 2:
 
                 boxeador2 = ObtenerBoxeador(); break;
+                Menu();
             case 3:
-            Pelear(boxeador1,boxeador2);
+                Pelear(boxeador1, boxeador2);
+                Menu();
                 break;
             case 4:
                 break;
@@ -100,7 +103,9 @@
             {
                 Console.WriteLine("Los dos boxeadores empataron");
             }
-        } else{
+        }
+        else
+        {
             Console.WriteLine("Uno de los boxeadores (O ninguno) no existe.");
         }
 
